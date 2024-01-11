@@ -1,39 +1,74 @@
-# BASE ANGULAR DTI
+# ComandoWeb Ionic
 
-<p align="center">
-  <img src="https://img.shields.io/badge/npm-8.19.2-red?style=flat&logo=npm&logoColor=white"> <img src="https://img.shields.io/badge/node-v18.16.1-green?style=flat&logo=node.js&logoColor=white"> <img src="https://img.shields.io/badge/Angular-v15.2.9-red?style=flat&logo=angular&logoColor=white"> <img src="https://img.shields.io/badge/Bootstrap-v5.2.3-blue?style=flat&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/Docker-20.10.12-blue?style=flat&logo=docker&logoColor=white">
-  <img src="https://img.shields.io/badge/Bash-5.1.16-red?style=flat&logo=gnubash&logoColor=white"> <img src="https://img.shields.io/badge/Linux-5.15.0-yellow?style=flat&logo=ubuntu&logoColor=white"> <img src="https://img.shields.io/badge/Git-2.34.1-orange?style=flat&logo=git&logoColor=white">
-</p>
+Este é o repositório do projeto ComandoWeb Ionic, um projeto baseado em Ionic. Este README fornece as informações necessárias para configurar e iniciar o projeto.
 
-## Pré Requisitos
-1 - Npm: **8.19.2** ou superior <br>
-2 - Node: **v18.16.1** ou superior <br>
-3 - Ambiente **Linux** baseado em **Debian/Ubuntu**<br>
+## Pré-requisitos 📋
 
-## Execução e configuração 
-Para iniciar o projeto e garantir que o seu ambiente tenhas as dependências necessárias execute o comando abaixo na raiz do projeto `base-angular-dti`.
-```bash 
-./init.sh
+Certifique-se de que as seguintes dependências estejam instaladas em seu sistema antes de começar:
+
+- [Node.js](https://nodejs.org/): Certifique-se de que o Node.js esteja instalado.
+- [NPM (Node Package Manager)](https://www.npmjs.com/): O NPM geralmente é instalado junto com o Node.js.
+- [Angular CLI](https://cli.angular.io/): Instale o Angular CLI globalmente com o seguinte comando:
+  ```
+  npm install -g @angular/cli
+  ```
+- [Ionic CLI](https://ionicframework.com/docs/cli): Instale o Ionic CLI globalmente com o seguinte comando:
+  ```
+  npm install -g @ionic/cli
+  ```
+
+## Clonando o Repositório 🔎
+
+Para clonar este repositório em sua pasta de desenvolvimento, siga os passos abaixo:
+
+1. Execute o comando Git Clone com a URL ou SSH do repositório:
+
+   ```
+   git clone -b <nome_da_branch> --single-branch <URL_do_repositório>
+   ```
+
+   Substitua "URL ou SSH" pela URL ou SSH do repositório CAADS Web.
+
+2. Navegue até o diretório do projeto:
+
+   ```
+   cd nome_do_projeto
+   ```
+
+   Substitua "nome_do_projeto" pelo nome do diretório do projeto.
+
+3. Instale as dependências do Node no projeto:
+
+   ```
+   npm install
+   ```
+
+   Isso instalará todas as dependências necessárias para o projeto.
+
+## Executando o Projeto 🧑‍💻
+
+Após clonar o repositório e instalar as dependências, você pode iniciar o projeto com os comandos apropriados do Angular. Certifique-se de estar no diretório do projeto.
+
+Para iniciar o servidor de desenvolvimento do Angular, use o seguinte comando:
+
 ```
-Caso queria configurar seu ambiente de desenvolvimento manualmente, não execute o comando acima, ao invés disso, após sua configuração execute os comandos dos próximos tópicos.
-
-## Instalando as Dependências
-Para instalar as dependências do projeto execute o comando:
-```bash
-npm install
+ng serve
 ```
-## Executando a Aplicação
-Para executar o servidor de desenvolvimento do projeto execute o comando:
-```bash
-npm run start
+
+Para utilizar o do Ionic, use o seguinte comando:
+
 ```
-Após iniciar, o projeto estará disponivel em [http://localhost:4200](http://localhost:4200). A aplicação irá recarregar automaticamente sempre que você salvar uma alteração no código fonte do projeto.
+ionic serve
+```
 
-## Build da Aplicação
-O artefatos gerados pelo *build* do projeto estarão disponíveis no diretório `dist/` após executar o comando:
-```bash
-npm run build
-``` 
+## [Prefixos dos Commits](https://github.com/JuniorLima22/padroes-e-nomenclaturas-no-git#prefixos-dos-commits)
+- 📚 [DOCS]: apenas mudanças de documentação.
+- ✨ [FEAT]: Adição de uma nova feature ao projeto, componente, etc.
+- 🐞 [FIX]: Correção de um bug.
+- ⚡ [PERF]: Melhoria de performance.
+- 🛠️ [REFACTOR]: Refatoração do código que não adiciona uma funcionalidade nem corrige um bug.
+- 🎨 [STYLE]: Mudanças no código que não afetam seu significado (espaço em branco, formatação, ponto e vírgula, etc).
+- 🧪 [TEST]: Adição ou correção de testes.
+- 🚀 [IMPROVEMENT]: Melhoria em algo já existente, seja de performance, escrita, layout, etc.
 
-## Developers
-[Carlos Mafra](https://github.com/CarlosMafraa), [Leyrilane de Souza](https://github.com/leyrilane), [Marcelo Bentes](https://github.com/msbentes), [Rodrigo Perote](https://github.com/perotedev), [Thiago Arthur](https://github.com/Thiago250801).
+O projeto estará disponível no seu navegador em http://localhost:4200 (Angular) ou http://localhost:8100 (Ionic).
