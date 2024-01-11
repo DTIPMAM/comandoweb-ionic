@@ -1,0 +1,75 @@
+<!-- DESKTOP NAVBAR -->
+<section id="navBar" class="bg-green-solid py-2 px-3 no-select-text shadow-sm">
+  <div class="d-flex justify-content-between align-items-center">
+    <div id="appName" class="d-flex align-items-center">
+      <button id="area-menu-icon-desktop" class="pointer" data-bs-toggle="offcanvas" data-bs-target="#leftMenuTab" aria-controls="leftMenuTab">
+        <div class="menuNavBarIcon">
+          <i class="bi bi-grid-fill fs-4" matTooltip="Menu de Acesso Rápido"></i>
+        </div>
+      </button>
+
+      <div class="ms-2 d-flex align-items-center">
+        <h4 class="m-0 p-0 ms-1 font-bold">{{nameApp}} - PMAM</h4>
+        <p class="p-0 m-0 ms-2 fs-5">| v{{versionApp}}</p>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-end fs-5">
+      <button (click)="navigateTo('/home')" class="ms-3 pointer" matTooltip="Página Inicial">
+        <i class="bi bi-house-door-fill"></i>
+      </button>
+
+      <button class="ms-3 pointer" matTooltip="Modo Dark">
+        <i class="bi bi-moon-stars-fill"></i>
+      </button>
+
+      <button
+        class="ms-2 px-2 py-1 rounded d-flex align-items-center pointer option-bar"
+        data-bs-toggle="offcanvas" data-bs-target="#rightUserTab" aria-controls="rightUserTab"
+        matTooltip="Menu do Usuário">
+          <i class="bi bi-person-circle"></i>
+          <p class="m-0 p-0 ms-2 fs-6">{{userName}}</p>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- MOBILE NAVBAR -->
+<section id="navBarMobile" class="no-select-text">
+  <nav class="navbar navbar-expand-lg bg-green-solid shadow-sm py-0">
+    <div class="container-fluid px-0">
+      <div class="ms-2 d-flex align-items-center ps-1 my-2">
+        <h4 class="m-0 p-0 ms-1 font-bold">{{nameApp}} - PMAM</h4>
+        <p class="p-0 m-0 ms-2 fs-5">| v{{versionApp}}</p>
+      </div>
+      <div id="btn-expanded" class="navbar-toggler me-1 my-2 pointer" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-1" title="Menu do Usuário"></i>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav align-items-center w-100">
+          <div class="d-flex w-100 justify-content-between align-items-center bg-light py-2">
+            <button (click)="navigateTo('/home'); closeMobileNavBar()" class="pointer border-end w-100 text-center text-secondary" title="Página Inicial">
+              <i class="bi bi-house-door-fill fs-4"></i>
+            </button>
+            
+            <button class="pointer border-end w-100 text-center text-secondary d-flex justify-content-center">
+              <i class="bi bi-moon-stars-fill fs-4"></i>
+            </button>
+
+            <button (click)="closeMobileNavBar()" class="pointer border-end w-100 text-center text-secondary" data-bs-toggle="offcanvas" data-bs-target="#rightUserTab" aria-controls="rightUserTab">
+              <i class="bi bi-person-circle fs-4"></i>
+            </button>
+            
+            <button (click)="logout(); closeMobileNavBar()" class="pointer w-100 text-center text-secondary" title="Sair">
+              <i class="bi bi-door-open-fill fs-4"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</section>
+
+
+<left-bar></left-bar>
+<user-bar [userName]="userName" [userUnity]="userUnity"></user-bar>

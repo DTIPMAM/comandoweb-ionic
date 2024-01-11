@@ -1,0 +1,18 @@
+<section>
+  <div id="notFound" class="container no-select-text top-not-found pt-4">
+    <div class="d-flex justify-content-center pb-5" [ngClass]="{'text-center': isMobileDevice}">
+      <div id="text-not-found" class="mx-5">
+        <h1>404</h1>
+        <h2>Página não encontrada!</h2>
+        <p class="font-regular">O link que você acessou pode estar quebrado ou a página pode ter sido removida.
+          Como você chegou aqui é um mistério, mas você pode clicar no botão abaixo e retornar para
+          página inicial do sistema.
+        </p>
+        <button (click)="navToHome()" class="rounded bg-btn-green-solid py-2 px-3 fs-6">
+          <i class="bi bi-house-door-fill me-1"></i> Página Inicial
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+

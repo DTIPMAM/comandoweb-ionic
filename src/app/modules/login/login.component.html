@@ -1,0 +1,161 @@
+<ngx-loader *ngIf="isLoadingLogin"></ngx-loader>
+
+<div>
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Atenção!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="bg-btn-green-solid py-1 px-2" data-bs-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="login-section" class="bg-green no-select-text fade-in">
+  <div class="row align-items-center font-regular w-100 h-100 m-0">
+    <div id="left-col" class="col-12 col-lg-4 col-xxl-4 m-0 py-5 text-center">
+      <div class="row h-100">
+        <div id="col-form-login" class="col-12 align-self-start justify-items-center">
+
+          <logo-pmam-login></logo-pmam-login>
+
+          <h3 class="fw-bold mt-3">Acesse sua conta</h3>
+          <div class="text-start">
+            <form [formGroup]="loginForm" (submit)="submitForm()" class="form-floating-smi">
+              <div class="form-floating mt-3">
+                <input 
+                  formControlName="username" 
+                  type="text" 
+                  class="form-control" 
+                  id="username" 
+                  minlength="5"
+                  maxlength="11"
+                  placeholder="Seu CPF"
+                  [ngClass]="{
+                    'is-valid': loginForm.get('username')?.valid,
+                    'is-invalid': loginForm.get('username')?.invalid && loginForm.get('username')?.value !== '' 
+                  }"
+                >
+                <label for="username"> <i class="bi bi-postcard-fill me-1 ms-1"></i> Seu CPF</label>
+              </div>
+
+              <div class="mt-3 form-floating">
+                <input 
+                  formControlName="password" 
+                  type="password" 
+                  class="form-control" 
+                  id="password" 
+                  minlength="1" 
+                  maxlength="15" 
+                  placeholder="Digite sua senha" 
+                  [ngClass]="{
+                    'is-valid': loginForm.get('password')?.valid,
+                    'is-invalid': loginForm.get('password')?.invalid && loginForm.get('password')?.value !== '' 
+                  }">
+                <label for="password"> <i class="bi bi-lock-fill me-1"></i> Sua senha</label>
+              </div>
+
+              <div class="mt-3">
+                <button type="submit" class="rounded bg-btn-green w-100 text-center py-2 px-2"> ENTRAR NO SISTEMA </button>
+              </div>
+            </form>
+
+            <!-- TO DO Recuperação de senha e primeiro acesso -->
+            <div class="small text-center mt-3">
+              <div class="col-12">
+                Não tem acesso? <a class="t-blue pointer" [routerLink]="['signup']">Cadastre-se</a>
+              </div>
+
+              <div class="col-12 mb-1">
+                <a id="forget-pass" class="t-blue pointer" [routerLink]="['recover-password']"> Recuperar senha <i class="bi bi-arrow-right-circle-fill ms-1"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="banner-dti-block" class="col-12 align-self-end pt-2">
+          <img id="banner-dti" src="../../../assets/images/logo-2.png" alt="Banner DTI4">
+        </div>
+      </div>
+    </div>
+
+    <div id="right-col" class="col-12 col-lg-8 col-xxl-8 px-0 mx-0 h-100">
+      <img class="img-logo" src="../../../assets/images/login/logo-branca2.png" alt="Brasão PMAM">
+
+      <div class="row h-100 p-0 m-0">
+        <div id="links" class="col-12 align-self-start">
+          <ul>
+            <li class="b-bottom">
+              <a href="https://play.google.com/store/apps/developer?id=Diretoria+de+Tecnologia+da+Informa%C3%A7%C3%A3o+-+DTI/PMAM" target="_blank" class="zoom">
+                <div class="img">
+                  <img src="../../../assets/images/login/icon-apps.svg" class="logo-svg" alt="">
+                </div>
+                <div>
+                  <h2>Baixe os apps da Polícia Militar do Amazonas</h2>
+                  <p>Acompanhe o Boletim Geral, consulte veículos, emita sua CI Digital, atestado de antecedentes, serviços operacionais e muito mais.</p>
+                  <img src="../../../assets/images/login/icon-gplay.png" alt="">
+                </div>
+              </a>
+            </li>
+            <li class="b-bottom">
+              <a href="https://pm.am.gov.br/portal" target="_blank">
+                <div class="img">
+                  <img src="../../../assets/images/login/icon-servicos.svg" class="logo-svg" alt="">
+                </div>
+                <div>
+                  <h2>Serviços Online</h2>
+                  <p>Consulte, valide e autentique documentos da Polícia Militar.</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="https://pm.am.gov.br/portal/contato" target="_blank">
+                <div class="img">
+                  <img src="../../../assets/images/login/icon-faq.svg" class="logo-svg" alt="">
+                </div>
+                <div>
+                  <h2>Dúvidas de acesso?</h2>
+                  <p>Veja as respostas para as dúvidas mais frequentes sobre acesso..</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-12 align-self-end">
+          <div id="footer-text" class="w-100">
+            <p class="m-0 p-0 small"> {{copyright}} </p>
+          </div>
+
+          <div id="login-footer" class="row align-self-end text-center bg-footer small">
+            <div class="col-12 col-md-4 py-3" (click)="navigateTo('https://pm.am.gov.br/portal/')">
+              Portal da PMAM
+            </div>
+
+            <div class="col-12 col-md-4 py-3" (click)="navigateTo('https://pmam.online/comandopmam/')">
+              Comando Web
+            </div>
+
+            <div class="col-12 col-md-4 py-3 dropup" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <p class="m-0 p-0">Ouvidorias</p>
+
+              <ul id="dropup-list" class="dropdown-menu w-100 text-center">
+                <li (click)="navigateTo('http://www.cge.am.gov.br/')"><p class="m-0 p-0 text-center w-100">Controladoria Geral</p></li>
+                <li (click)="navigateTo('https://falabr.cgu.gov.br/publico/AM/manifestacao/RegistrarManifestacao')"><p class="m-0 p-0 text-center w-100">Ouvidoria Federal</p></li>
+                <li (click)="navigateTo('https://acessoainformacao.am.gov.br/index/')"><p class="m-0 p-0 text-center w-100">Ouvidoria Estadual</p></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

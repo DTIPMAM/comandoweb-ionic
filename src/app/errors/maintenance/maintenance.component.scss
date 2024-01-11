@@ -1,0 +1,32 @@
+h1 {
+    font-size: 7.5em;
+    margin: 15px 0px;
+    font-weight:bold;
+  }
+  h2 {
+    font-weight:bold;
+  }
+  
+  img {
+    margin-top: 1rem;
+    max-height: 17rem;
+  }
+  
+  button:active {
+    transform: scale(1.05);
+    transition: all 200ms;
+  }
+  
+  #notFound {
+    // width: max-content;
+    color: #0F6955;
+  }
+  
+  #text-not-found {
+    max-width: 40rem;
+  }
+  
+  .top-not-found {
+    margin-top: 3%;
+  }
+  

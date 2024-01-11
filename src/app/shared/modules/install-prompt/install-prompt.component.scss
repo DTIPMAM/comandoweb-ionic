@@ -1,0 +1,58 @@
+.light-theme .mat-snack-bar-container{
+  background: #e2e3e5;
+}
+.mat-snack-bar-container {
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  margin: 24px;
+  max-width: 33vw;
+  min-width: 344px;
+  padding: 0;
+  min-height: 48px;
+  transform-origin: center;
+}
+button{
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+.install-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.install-form .button-control{
+  margin-left: 2rem;
+  display: flex;
+}
+
+.install-form .button-control button{
+  margin-right: 1rem;
+  padding: 0.5rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+.install-form .button-control .ok{
+  background: #1d4471;
+  color: #FFFFFF;
+}
+.install-form .button-control .denied{
+  background: #FFFFFF;
+  color: #0e2a54;
+  font-size: 0.8rem;
+
+}
+.ios-menu {
+  width: 14px;
+  margin: 0 5px 5px;
+}
+.alert-secondary{
+  opacity: 95%;
+}

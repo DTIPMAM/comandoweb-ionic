@@ -1,0 +1,53 @@
+<div *ngIf="!isMobileDevice" id="navPage" [ngClass]="{'mb-3': haveMargin}" class="w-100 border rounded d-flex align-items-center justify-content-between no-select-text ps-1 pe-3">
+  <div class="d-flex">
+    <div *ngFor="let route of routesArray; let index = index" class="ps-1 py-2 m-0">
+      <div *ngIf="index>0" class="d-flex fst-italic title">
+        <a *ngIf="index < routesArray.length-1" (click)="this.navigateTo(route)" class="pointer">
+          {{route}}
+        </a>
+        <p *ngIf="index === routesArray.length-1" class="m-0 p-0 last-route">
+          {{route}} <i class="bi bi-caret-right-fill me-1"></i> <span class="fw-bold t-green">{{titlePage}}</span>
+        </p>
+
+        <p *ngIf="routesArray.length-1 != index" class="m-0 p-0 ms-1 last-route">/</p>
+      </div>
+    </div>
+  </div>
+
+  <i class="bi bi-signpost-2-fill"></i>
+</div>
+
+<div id="navPageMobile" *ngIf="isMobileDevice" [ngClass]="{'mb-3': haveMargin}" class="w-100">
+  <div class="accordion accordion-flush p-0" id="accordionBreadCrumb">
+    <div class="accordion-item border rounded p-0">
+      <p class="accordion-header" id="flush-headingBreadcrumb">
+        <button
+          class="accordion-button collapsed px-3 d-flex justify-content-between align-items-center" type="button"
+          data-bs-toggle="collapse" data-bs-target="#flush-collapseBreadcrumb" aria-expanded="false" aria-controls="flush-collapseBreadcrumb">
+          <div class="d-flex fst-italic">
+            <i class="bi bi-caret-right-fill me-1"></i>
+            <p class="m-0 p-0 fw-bold t-green">{{titlePage}}</p>
+          </div>
+            <div id="chevronDown">
+              <i class="bi bi-signpost-2-fill"></i>
+            </div>
+        </button>
+      </p>
+      <div id="flush-collapseBreadcrumb" class="accordion-collapse collapse" aria-labelledby="flush-headingBreadcrumb" data-bs-parent="#accordionBreadCrumb">
+        <div class="accordion-body px-3 pt-0 pb-2 mb-1 d-flex flex-column lh-sm">
+          <div *ngFor="let route of routesArray; let index = index" class="ps-1 py-2 m-0">
+            <div *ngIf="index>0" class="d-flex fst-italic title">
+              <a *ngIf="index < routesArray.length-1" (click)="this.navigateTo(route)" class="pointer">
+                {{route}}
+              </a>
+              <p *ngIf="index === routesArray.length-1" class="m-0 p-0 last-route">
+                {{route}}
+              </p>
+              <p *ngIf="routesArray.length-1 != index" class="m-0 p-0 ms-1 last-route">/</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

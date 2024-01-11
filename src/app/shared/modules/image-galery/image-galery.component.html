@@ -1,0 +1,91 @@
+<section *ngIf="isMobileDevice; else desktop"  class="h-100 d-flex flex-column align-items-stretch">
+  <div class="list-header py-2 px-3 w-100 d-flex justify-content-between text-white shadow">
+    <p class="m-0 p-0 pt-2 fs-6">
+      {{selectdIndex +1}} / {{ fotos.length }}
+    </p>
+    
+    <p class="m-0 p-0 pt-2">
+      {{ title }}
+    </p>
+
+    <p class="m-0 p-0 d-flex">
+      <i class="bi bi-download mt-1 fs-4 me-3 pointer" title="Salvar" (click)="download()"></i>
+      <i class="bi bi-x-circle mt-1 fs-4 pointer" title="Fechar" (click)="onCloseClick()"></i>
+    </p>
+  </div>
+  <div class="h-100">
+    <div id="image" class="w-100 text-center d-flex flex-column align-items-stretch justify-content-center">
+      <img 
+        id="imgMobile"
+        zoomMode="LENS"
+        [src]="fotos[selectdIndex]"
+      >
+      
+      <button *ngIf="selectdIndex > 0" (click)="setIndex(selectdIndex - 1)" class="btn-left px-3 pointer" title="Anterior">
+        <i class="bi bi-chevron-left fs-4"></i>
+      </button>
+
+      <button *ngIf="selectdIndex < fotos.length-1" (click)="setIndex(selectdIndex + 1)" class="btn-right px-3 pointer" title="Próximo">
+        <i class="bi bi-chevron-right fs-4"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<ng-template #desktop>
+  <section (onResize)="onResize()" class="h-100">
+    <div [ngClass]="{'h-80': height > 999, 'h-75': height < 1000 && height > 827, 'h-70': height < 828 && height > 669, 'h-60': height < 670}">
+      <div class="list-header py-2 px-3 w-100 d-flex justify-content-between text-white shadow">
+        <p class="m-0 p-0 pt-2 fs-6">
+          {{selectdIndex +1}} / {{ fotos.length }}
+        </p>
+        
+        <p class="m-0 p-0 pt-2">
+          {{ title }}
+        </p>
+  
+        <p class="m-0 p-0 d-flex">
+          <i class="bi bi-download mt-1 fs-4 me-4 pointer" title="Salvar" (click)="download()"></i>
+          <i class="bi bi-x-circle mt-1 fs-4 pointer" title="Fechar" (click)="onCloseClick()"></i>
+        </p>
+      </div>
+      <div id="image" class="w-100 text-center">
+        <ng-magnizoom 
+          zoomMode="LENS"
+          [imageSrc]="fotos[selectdIndex]"
+          [imageStyle]="{'height': '100%', 'max-height': '100%', 'width': 'auto'}"
+          lensSizeUnit="PIXEL"
+          [lensSize]="{width:200, height:200}">
+        </ng-magnizoom>
+     
+        <button *ngIf="selectdIndex > 0" (click)="setIndex(selectdIndex - 1)" class="btn-left px-3 pointer" title="Anterior">
+          <i class="bi bi-chevron-left fs-4"></i>
+        </button>
+
+        <button *ngIf="selectdIndex < fotos.length-1" (click)="setIndex(selectdIndex + 1)" class="btn-right px-3 pointer" title="Próximo">
+          <i class="bi bi-chevron-right fs-4"></i>
+        </button>
+      </div>
+    </div>
+    <div class="image-list" [ngClass]="{'h-20': height > 999, 'h-25': height < 1000 && height > 827, 'h-30': height < 828 && height > 669, 'h-40': height < 670}">
+      <div class="m-0 py-3 d-flex justify-content-center h-100 list-w" *ngIf="fotos !== undefined && fotos.length > 0">
+        <div *ngFor="let foto of fotos let i = index" class="me-3 h-100" [ngClass]="{'ms-3': i === 0}">
+          <div class="container-img zoom h-100" (click)="setIndex(i)" [ngClass]="{'img-selected': selectdIndex === i}">
+            <img [src]="foto" class="pointer">
+            <div *ngIf="selectdIndex !== i" class="d-flex justify-content-center align-items-center h-100 w-100 text-center search-icon pointer">
+              <div class="d-flex flex-column w-100 justify-content-center align-items-center lh-sm">
+                <p class="img-text m-0 p-0 px-1 lh-sm">
+                  Clique
+                </p>
+                <p class="img-text m-0 p-0 px-1 lh-sm">
+                  para visualizar
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</ng-template>
+

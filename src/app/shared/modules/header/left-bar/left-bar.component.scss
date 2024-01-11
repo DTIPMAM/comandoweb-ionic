@@ -1,0 +1,44 @@
+button {
+  box-shadow: none !important;
+}
+
+.offcanvas {
+  border: none;
+  background: transparent;
+  height: max-content !important;
+}
+
+.offcanvas-body {
+  width: max-content !important;
+}
+
+.node-option {
+  width: 100%;
+  text-decoration: none;
+  color: #000000;
+  transition: all 200ms;
+
+}
+
+.node-option:hover {
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  color: #0F6955;
+  transition: all 200ms;
+
+  i {
+    color: #0F6955 !important;
+  }
+
+  p {
+    color: #0F6955 !important;
+  }
+}
+
+.zoom {
+  transition: all 200ms;
+}
+
+.zoom:hover {
+  transform: scale(1.03);
+  transition: all 200ms;
+}

@@ -1,0 +1,58 @@
+#navPage {
+  background-color: rgba($color: #0F6955, $alpha: 0.05);
+
+  .last-item {
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #052E32;
+  }
+}
+
+#navPageMobile {
+  .accordion-button {
+    background-color: rgba($color: #0F6955, $alpha: 0.05);
+    box-shadow: none;
+    height: 2.5rem;
+    border-radius: 5px !important;
+    color: rgba($color: #052E32, $alpha: 0.5) !important;
+    transition: all 200ms;
+  }
+
+  .accordion-button:hover {
+    background-color: rgba($color: #0F6955, $alpha: 0.05);
+    transition: all 200ms;
+  }
+
+  .accordion-button[aria-expanded="true"] {
+    background-color: rgba($color: #0F6955, $alpha: 0.05);
+    color: rgba($color: #052E32, $alpha: 0.5) !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    transition: all 200ms;
+
+    #chevronDown{
+      transform: rotate(180deg) !important;
+      transition: all 300ms;
+    }
+  }
+
+  .accordion-button::after {
+    display: none !important;
+  }
+
+  #chevronDown{
+    transform: rotate(0deg) !important;
+    transition: all 300ms;
+
+  }
+}
+
+.last-route {
+  color: #0F6955;
+}
+
+i {
+  color: rgba($color: #0F6955, $alpha: 0.7);
+}

@@ -1,0 +1,21 @@
+<footer id="smi-footer" class="text-muted mt-3 bg-green-solid pb-3 border-top">
+
+  <div class="bg-lines"></div>
+  <div class="bg-lines-invert"></div>
+
+  <div class="row mt-3 align-items-center justify-content-center" [ngClass]="{'w-100': isMobileDevice, 'mx-3': !isMobileDevice}">    
+    <div *ngIf="!isMobileDevice" class="col-2 p-0">
+      <img class="logo" src="../../../../assets/images/PMAM.png" alt="Logo da PMAM">
+    </div>
+
+    <div class="text-center" [ngClass]="{'col-8': !isMobileDevice, 'col-12': isMobileDevice}">
+        <p *ngFor="let text of arrayCopyright; let index = index" class="p-0 m-0 lh-sm w-100 mx-2 t-light">
+            {{text}}<span *ngIf="index < arrayCopyright.length-1">.</span>
+        </p>
+    </div>
+      
+    <div *ngIf="!isMobileDevice" class="col-2 text-end p-0">
+      <img class="logo" src="../../../../assets/images/logo-dti.png" alt="Logo da DTI">
+    </div>
+  </div>
+</footer>

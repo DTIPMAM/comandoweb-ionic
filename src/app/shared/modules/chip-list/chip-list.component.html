@@ -1,0 +1,30 @@
+<div class="chip-list pb-1">
+  <mat-chip-row
+    class="fw-normal me-1 mb-1 py-1 h-100 small"
+    *ngFor="let option of options"
+    (removed)="remove(option)">
+    {{option.split(" - ")[0]}}
+    <button matChipRemove>
+      <i class="bi bi-x-circle-fill"></i>
+    </button>
+  </mat-chip-row>
+
+  <mat-form-field class="example-chip-list m-0 p-0 mt-1 w-100 mt-2" appearance="outline">
+    <mat-label>{{inputTitle}}</mat-label>
+    <mat-chip-grid #chipList aria-label="Seleção de Opções m-0 p-0">
+      <input
+        placeholder="Digite aqui..."
+        #optionInput
+        [formControl]="oprtionCtrl"
+        [matAutocomplete]="auto"
+        [matChipInputFor]="chipList"
+        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+        (matChipInputTokenEnd)="add($event)">
+    </mat-chip-grid>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option" [title]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>

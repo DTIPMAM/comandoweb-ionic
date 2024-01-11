@@ -1,0 +1,8 @@
+<form>
+  <div *ngFor="let option of options; let i = index" class="form-check">
+    <input [disabled]="disable" class="form-check-input" type="checkbox" [checked]="disable?'':disable" [value]="option" [id]="i+'flexCheckDefault'" (change)="onChangeCheck($event)">
+    <label class="form-check-label no-select-text pointer" [for]="i+'flexCheckDefault'">
+      {{option}}
+    </label>
+  </div>
+</form>

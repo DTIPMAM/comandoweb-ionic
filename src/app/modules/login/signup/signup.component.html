@@ -1,0 +1,54 @@
+<section id="signup-section" class="bg-green no-select-text">
+  <img class="img-logo" src="../../../../assets/images/login/logo-branca2.png" alt="Brasão PMAM">
+
+  <div class="row h-100 w-100 p-0 m-0 align-items-center">
+    <div class="col-12 col-md-3 col-xxl-4 m-0 p-0"></div>
+
+    <div id="col-signup" class="col-12 col-md-6 col-xxl-4">
+      <div id="col-form" class="text-center py-4 mat-stepper-smi">
+
+        <logo-pmam-login></logo-pmam-login>
+
+        <h3 class="fw-bold mt-2 mb-0 pb-0">Cadastre-se</h3>
+
+        <mat-horizontal-stepper class="mt-0 pt-0 font-regular" stepper linear #stepper>
+          <mat-step [stepControl]="checkMilitaryForm" [editable]="isStepEditable">
+            <form [formGroup]="checkMilitaryForm">
+              <ng-template matStepLabel>Verificar Militar</ng-template>
+
+              <check-military (onMilitaryChecked)="setMilitaryFormValue($event)" ></check-military>
+
+            </form>
+          </mat-step>
+
+          <mat-step [stepControl]="createPasswordForm" [editable]="isStepEditable">
+            <form [formGroup]="createPasswordForm">
+              <ng-template matStepLabel>Criar Senha</ng-template>
+
+              <create-password (onPasswordValid)="setPasswordForm($event)"></create-password>
+
+            </form>
+          </mat-step>
+
+          <mat-step [editable]="isStepEditable">
+            <ng-template matStepLabel>Finalizar</ng-template>
+            <div>
+              <div class="bg-green rounded text-white py-3 px-2">
+                <p class="m-0 p-0"> Olá, <span class="fw-bold">1ºTEN ROBERTO MIRANDA</span>, está quase tudo pronto!</p>
+                <p class="m-0 p-0">Enviamos para o seu e-mail um link para confirmar seu cadastro.</p>
+              </div>
+              <button class="rounded bg-btn-blue w-100 text-center mt-3 py-2 px-2" routerLink="/login"> Ir para o login </button>
+              <p class="m-0 p-0 mt-2">Caso não tenha recebido o e-mail <a href="" target="_blank">clique aqui</a> para enviar novamente.</p>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+
+        <div id="copyright-signup" class="font-regular pb-3 pt-3">
+          <p class="m-0 p-0"> {{copyright}} </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-3 col-xxl-4 m-0 p-0"></div>
+  </div>
+</section>

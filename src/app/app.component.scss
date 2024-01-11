@@ -1,0 +1,22 @@
+::ng-deep {
+  .mat-progress-bar {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 50 !important;
+    height: 2px !important;
+  }
+
+  .mat-progress-bar-fill::after {
+    // background-color: #0F6955 !important;
+    background-color: white !important;
+  }
+
+  .mat-progress-bar-buffer {
+    // background-color: #148F6C !important;
+    background-color: #0F6955 !important;
+  }
+}
+
+.section-margin {
+  margin-top: 55px;
+}

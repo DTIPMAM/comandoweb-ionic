@@ -1,0 +1,111 @@
+#navBar {
+    height: 55px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+
+    #appName {
+      padding-top: 2px;
+    }
+
+    button {
+      p {
+        height: 23px !important;
+        vertical-align: middle !important;
+      }
+    }
+
+    #pmam-icon {
+        max-height: 25px;
+        width: auto;
+    }
+
+    .option-bar:hover {
+        background-color: #148F6C;
+        transition: all 200ms;
+    }
+
+    .option-bar:active {
+        background-color: white;
+        color: #0F6955;
+        transition: all 200ms;
+    }
+}
+
+#navBarMobile{
+  z-index: 50;
+  height: 55px;
+  max-height: 55px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.menuNavBarIcon {
+    transition: all 200ms;
+}
+
+.menuNavBarIcon:hover {
+    transform: rotate(45deg);
+    transition: all 200ms;
+}
+
+#btn-expanded[aria-expanded="false"]{
+    outline: none !important;
+    border: none !important;
+    color: white !important;
+    transition: all 300ms;
+}
+
+
+#btn-expanded[aria-expanded="true"]{
+    outline: none !important;
+    border: none !important;
+    color: white !important;
+    transform: rotate(90deg);
+    transition: all 300ms;
+}
+
+button {
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  transform: none;
+  color: white;
+}
+
+section {
+  max-width: 100vw;
+}
+
+.notification-badge {
+  transform: scale(0.6) !important; 
+  left: 5px !important; 
+  top: -3px !important;
+}
+
+.notification-badge-mobile {
+  transform: scale(0.73) !important; 
+  left: 8px !important; 
+  top: 2px !important;
+}
+
+.dropdown-toggle::after {
+  content: none;
+}
+
+.dropdown-menu {
+  min-width: 365px;
+}
+
+.notif:hover {
+  background-color: rgba($color: #000000, $alpha: 0.05);
+}
+
+.t-dark {
+  color: rgba($color: #000000, $alpha: 0.88);;
+}

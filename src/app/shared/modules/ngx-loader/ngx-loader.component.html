@@ -1,0 +1,7 @@
+<ngx-ui-loader *ngIf="!isDataSourceLoading; else loaderDataSource" [loaderId]="loaderId" [overlayColor]="'rgba(7, 7, 6, 0.29))'" [pbThickness]="2" [pbColor]="'#ffffff'" [fgsType]="'rectangle-bounce'" [fgsColor]="'#ffffff'" [logoUrl]="'../../../assets/images/login/logo-branca.png'" [logoSize]="300"></ngx-ui-loader>
+
+<ng-template #loaderDataSource>
+    <div style="position: relative">
+        <ngx-ui-loader [loaderId]="'loaderDataSource'" [pbThickness]="3" [pbColor]="'#148F6C'" [fgsPosition]="'top-center'" [fgsType]="'rectangle-bounce'" [fgsColor]="'#0F6955'"></ngx-ui-loader>
+    </div>
+</ng-template>

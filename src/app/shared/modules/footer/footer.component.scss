@@ -1,0 +1,58 @@
+footer {
+  font-size: 12px;
+  height: 90px;
+}
+
+.logo{
+  max-height: 60px;
+}
+
+img {
+  position: relative;
+  z-index: 100;
+}
+
+p {
+  position: relative;
+  z-index: 150;
+}
+
+.fixed-footer {
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 0;
+  left: 0;
+}
+
+.relative-pos {
+  position: relative;
+}
+
+.bg-lines {
+  background: #fff url("../../../../assets/images/login/bg-login.svg") no-repeat left bottom;
+  height: 90px;
+  width: 50%;
+  filter: invert(0.8);
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  opacity: 0.5;
+  border: none;
+}
+
+.bg-lines-invert {
+  background: #fff url("../../../../assets/images/login/bg-login.svg") no-repeat left bottom;
+  height: 90px;
+  width: 50%;
+  filter: invert(0.8);
+  position: absolute;
+  right: 0;
+  z-index: 5 ;
+  opacity: 0.5;
+  transform: rotate(180deg);
+  border: none;
+}
+
+.t-light {
+  color: rgba($color: #FFFFFF, $alpha: 0.82);
+}
