@@ -1,15 +1,3 @@
-<div (onResize)="onResize()">
-  <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
-  
-  <sx-header *ngIf="isHome"></sx-header>
-  <user-print-mark *ngIf="isHome"></user-print-mark>
-  
-  <section [ngClass]="{'section-margin pt-3': isHome}">
-    <router-outlet></router-outlet>
-  </section>
-
-  <!-- <button (click)="onChangeDialog()">termo</button> -->
-  
-  <sx-footer *ngIf="isHome" ></sx-footer>
-</div>
-
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

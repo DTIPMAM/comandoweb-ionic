@@ -16,15 +16,12 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "ES2022",
+    "target": "es2022",
     "module": "es2020",
     "lib": [
-      "es2020",
+      "es2018", 
       "dom"
     ],
-    "allowSyntheticDefaultImports": true,
-    "strictPropertyInitialization": false,
-    "resolveJsonModule": true,
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
