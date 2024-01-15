@@ -1,0 +1,21 @@
+<ion-content class="ion-padding">
+  <ion-grid class="ion-text-center ion-padding">
+    <ion-row class="ion-justify-content-center ion-padding-bottom">
+      <ion-col size-md="6" size-lg="4" size-xl="3">
+        <div id="text-not-found">
+          <h1>404</h1>
+          <h2>Página não encontrada!</h2>
+          <p class="ion-text-wrap ion-font-weight-regular">O link que você acessou pode estar quebrado ou a página pode ter sido removida.
+            Como você chegou aqui é um mistério, mas você pode clicar no botão abaixo e retornar para
+            página inicial do sistema.
+          </p>
+          <ion-button (click)="navToHome()" expand="full" class="ion-margin-top bg-btn-green-solid">
+            <ion-icon name="home-outline" slot="start"></ion-icon> Página Inicial
+          </ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+
