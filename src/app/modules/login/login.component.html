@@ -1,0 +1,56 @@
+<ion-content class="ion-padding fade-in" id="login-section" fullscreen>
+  <ion-grid class="ion-text-center ion-padding">
+    <ion-row class="ion-justify-content-center ion-padding-bottom">
+      <ion-col size-md="12" size-lg="4" size-xxl="4" class="ion-text-center">
+        <div class="ion-align-items-center">
+          <logo-pmam-login></logo-pmam-login>
+
+          <ion-title class="ion-margin-top fw-bold">Acesse sua conta</ion-title>
+
+          <form [formGroup]="loginForm" (ngSubmit)="submitForm()" class="ion-margin-top">
+            <ion-item>
+              <ion-input
+                formControlName="username"
+                type="text"
+                placeholder="Seu CPF"
+                [class.valid-input]="loginForm.get('username')?.valid"
+                [class.invalid-input]="loginForm.get('username')?.invalid && loginForm.get('username')?.value !== ''"
+              ></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input
+                formControlName="password"
+                type="password"
+                placeholder="Digite sua senha"
+                [class.valid-input]="loginForm.get('password')?.valid"
+                [class.invalid-input]="loginForm.get('password')?.invalid && loginForm.get('password')?.value !== ''"
+              ></ion-input>
+            </ion-item>
+
+            <ion-button expand="full" type="submit" class="rounded bg-btn-green mt-3">
+              ENTRAR NO SISTEMA
+            </ion-button>
+          </form>
+
+          <div class="small text-center mt-3">
+            <div class="ion-margin-bottom">
+              Não tem acesso? <ion-router-link routerLink="signup">Cadastre-se</ion-router-link>
+            </div>
+
+            <ion-router-link routerLink="recover-password">
+              <div class="ion-margin-bottom">
+                Recuperar senha <ion-icon name="arrow-forward-circle"></ion-icon>
+              </div>
+            </ion-router-link>
+          </div>
+        </div>
+      </ion-col>
+
+      <ion-col size-md="12" size-lg="8" size-xxl="8" class="ion-align-self-end pt-2">
+        <img src="../../../assets/images/logo-2.png" alt="Banner DTI4" id="banner-dti">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
