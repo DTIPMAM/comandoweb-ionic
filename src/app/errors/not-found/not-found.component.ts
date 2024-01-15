@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./not-found.component.scss']
 })
 export class NotFoundComponent implements OnInit {
-  
+
   // Indica se o dispositivo é móvel
   public isMobileDevice: boolean = false;
 
