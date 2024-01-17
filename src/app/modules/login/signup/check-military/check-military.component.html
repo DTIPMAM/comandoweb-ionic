@@ -1,0 +1,17 @@
+<div class="p-0 m-0 font-regular">
+  <form (submit)="emmitValidation()" class="was-validated text-start form-floating-smi">
+    <div class="form-floating mt-0">
+      <input type="text" class="form-control" id="cpf" minlength="11" maxlength="14" placeholder="Digite seu CPF" required>
+      <label for="cpf"> <i class="bi bi-credit-card-2-front-fill mx-1"></i> Seu CPF</label>
+    </div>
+
+    <div class="form-floating mt-3">
+      <input type="email" class="form-control" id="email" minlength="8" maxlength="50" placeholder="Digite seu e-mail" required>
+      <label for="email"> <i class="bi bi-envelope-fill me-1 ms-1"></i> Seu e-mail</label>
+    </div>
+
+    <div class="mt-3">
+      <button type="submit" class="rounded bg-btn-green w-100 text-center py-2 px-2"> VERIFICAR </button>
+    </div>
+  </form>
+</div>
