@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { LoginComponent } from './modules/login/login.component';
+import IonicStepperModule from "ionic-stepper";
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { LoginComponent } from './modules/login/login.component';
     NotFoundComponent,
     LoginComponent
   ],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicStepperModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
