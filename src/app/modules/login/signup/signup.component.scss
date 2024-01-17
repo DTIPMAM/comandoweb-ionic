@@ -1,0 +1,42 @@
+/* Estilização para a seção de cadastro (#signup-section) */
+#signup-section {
+  color: rgba($color: #000000, $alpha: 0.8) !important;
+
+  /* Estilização da coluna de cadastro (#col-signup) */
+  #col-signup {
+    z-index: 1;
+    padding: 0;
+  }
+
+  /* Estilização do formulário de cadastro (#col-form) */
+  #col-form {
+    background: #fff url("../../../../assets/images/login/bg-login.svg") no-repeat left bottom;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    /* Estilização para o texto de direitos autorais (#copyright-signup) */
+    #copyright-signup {
+      font-size: small;
+      text-align: justify;
+
+      /* Estilização para os parágrafos dentro do texto de direitos autorais */
+      p {
+        font-size: smaller;
+      }
+    }
+  }
+}
+
+/* Estilização para a classe hd-login (altura de 100% da viewport) */
+.hd-login {
+  height: 100vh;
+}
+
+/* Estilização para a imagem do logo (#img-logo) */
+.img-logo {
+  height: 70%;
+  position: fixed;
+  right: -15%;
+  top: 15%;
+  z-index: 0;
+}
