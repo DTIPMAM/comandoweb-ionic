@@ -9,11 +9,12 @@ import { MatStepper } from '@angular/material/stepper';
   styleUrls: ['./signup.component.scss']
 })
 export class SignupComponent implements OnInit {
-  @ViewChild('stepper') private signupStepper: MatStepper; // Referência para o MatStepper na view
+  @ViewChild('stepper')
+  private signupStepper!: MatStepper; // Referência para o MatStepper na view
   public isStepEditable: boolean = false; // Flag para controlar se o passo do formulário é editável
   public copyright: string = constants.copyright; // Propriedade para armazenar informações de direitos autorais
-  public checkMilitaryForm: FormGroup; // Formulário reativo para a etapa de verificação militar
-  public createPasswordForm: FormGroup; // Formulário reativo para a etapa de criação de senha
+  public checkMilitaryForm!: FormGroup; // Formulário reativo para a etapa de verificação militar
+  public createPasswordForm!: FormGroup; // Formulário reativo para a etapa de criação de senha
 
   constructor(
     private formBuilder: FormBuilder
