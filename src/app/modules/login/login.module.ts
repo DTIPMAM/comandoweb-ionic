@@ -21,7 +21,7 @@ import { IonicStepperModule } from 'ionic-stepper';
     NgxLoaderModule,
     LoginRoutes,
     IonicStepperModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot()
   ],
   declarations: [
     LoginComponent,
