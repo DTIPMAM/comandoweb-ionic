@@ -19,7 +19,7 @@ import { environment } from 'src/environments/environment';
 })
 export class LoginComponent implements OnInit {
   public copyright: string = constants.copyright;
-  public loginForm: FormGroup;
+  public loginForm!: FormGroup;
   private fromUrl: string = '';
   public isLoadingLogin: boolean = false;
   public alertMessage: string = '';
