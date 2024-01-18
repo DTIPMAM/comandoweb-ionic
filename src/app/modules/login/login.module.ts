@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { NgxLoaderModule } from '../../shared/modules/ngx-loader/ngx-loader.module';
 import {IonicModule} from "@ionic/angular";
-import { IonicStepperModule } from 'ionic-stepper';
 
 
 @NgModule({
@@ -20,7 +19,6 @@ import { IonicStepperModule } from 'ionic-stepper';
     SharedModule,
     NgxLoaderModule,
     LoginRoutes,
-    IonicStepperModule,
     IonicModule.forRoot()
   ],
   declarations: [

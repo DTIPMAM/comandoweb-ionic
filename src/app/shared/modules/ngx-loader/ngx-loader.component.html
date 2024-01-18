@@ -1,0 +1,5 @@
+<ion-spinner *ngIf="!isDataSourceLoading; else loaderDataSource" [name]="'bubbles'" [color]="'primary'"></ion-spinner>
+
+<ng-template #loaderDataSource>
+  <ion-spinner [name]="'bubbles'" [color]="'success'" class="custom-loader"></ion-spinner>
+</ng-template>
