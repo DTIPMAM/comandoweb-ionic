@@ -13,6 +13,35 @@
     <h3 class="fw-bold mt-2 mb-0 pb-0">Cadastre-se</h3>
   </div>
 
+  <!-- Tentei utilizar o Stepper. No entanto, não consegui resolver os erros de compatibilidade e importação das dependências -->
+  <!-- <ion-stepper class="mt-0 pt-0 font-regular" #stepper> -->
+    <!-- Step 1 -->
+    <!-- <ion-step [formGroup]="checkMilitaryForm" [editable]="isStepEditable">
+      <ion-label>Verificar Militar</ion-label>
+      <check-military (onMilitaryChecked)="setMilitaryFormValue($event)"></check-military>
+    </ion-step> -->
+
+    <!-- Step 2 -->
+    <!-- <ion-step [formGroup]="createPasswordForm" [editable]="isStepEditable">
+      <ion-label>Criar Senha</ion-label>
+      <create-password (onPasswordValid)="setPasswordForm($event)"></create-password>
+    </ion-step> -->
+
+    <!-- Step 3 -->
+    <!-- <ion-step [editable]="isStepEditable">
+      <ion-label>Finalizar</ion-label>
+      <div>
+        <div class="bg-green rounded text-white py-3 px-2">
+          <p class="m-0 p-0"> Olá, <span class="fw-bold">1ºTEN ROBERTO MIRANDA</span>, está quase tudo pronto!</p>
+          <p class="m-0 p-0">Enviamos para o seu e-mail um link para confirmar seu cadastro.</p>
+        </div>
+        <ion-button expand="full" class="rounded bg-btn-blue mt-3" routerLink="/login">Ir para o login</ion-button>
+        <p class="m-0 p-0 mt-2">Caso não tenha recebido o e-mail <a href="" target="_blank">clique aqui</a> para enviar novamente.</p>
+      </div>
+    </ion-step> -->
+  <!-- </ion-stepper> -->
+
+  <!-- Por enquanto vou manter o que foi feito utilizando o Material Angular -->
   <mat-horizontal-stepper class="mt-0 pt-0 font-regular" stepper linear #stepper>
     <mat-step [stepControl]="checkMilitaryForm" [editable]="isStepEditable">
       <form [formGroup]="checkMilitaryForm">
