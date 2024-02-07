@@ -1,0 +1,25 @@
+#userPrintMark {
+    width: 100vh;
+    height: 100vh;
+    top: 9%;
+    left: -9%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: black;
+    position: fixed;
+    font-weight: bold;
+    font-size: 220px;
+    transform: rotate(300deg);
+    opacity: 0.2;
+    width: 100%;
+    z-index: 100;
+    visibility: hidden;
+}
+
+#titlePagePrintMark {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  z-index: -1;
+}
