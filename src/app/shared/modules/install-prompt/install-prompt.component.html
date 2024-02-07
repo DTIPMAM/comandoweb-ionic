@@ -1,0 +1,33 @@
+<div *ngIf=" modalPwaPlatform === 'isBrowser' ||  modalPwaPlatform === 'IOS' ||  modalPwaPlatform === 'ANDROID' ">
+  <div *ngIf="modalPwaPlatform === 'isBrowser'" class="install-form">
+    <span>Deseja instalar o {{ systemName }} na tela inicial?</span>
+    <div class="button-control">
+      <button class="ok" (click)="addToHomeScreen()">SIM</button>
+      <button class="denied" (click)="close()">NÃO</button>
+    </div>
+    <button (click)="close()"><i class="bi bi-x-lg"></i></button>
+  </div>
+
+  <div *ngIf="modalPwaPlatform === 'ANDROID'" class="install-form">
+    <span>Deseja instalar o {{ systemName }} na tela inicial?</span>
+    <div class="button-control">
+      <button class="ok" (click)="addToHomeScreen()">SIM</button>
+      <button class="denied" (click)="close()">NÃO</button>
+    </div>
+    <button (click)="close()"><i class="bi bi-x-lg"></i></button>
+  </div>
+  
+  <div *ngIf="modalPwaPlatform === 'IOS'" class="m-2 install-form">
+    <div class="text-center" style="font-size: 0.8rem">
+      Para instalar o {{ systemName }} no seu dispositivo pelo SAFARI, abra o botão
+      <b class="ml-2"> "Menu"</b>
+      <img
+        src="https://res.cloudinary.com/rodrigokamada/image/upload/v1641089482/Blog/angular-pwa/safari_action_button_38x50.png"
+        class="ios-menu mx-3"
+        alt="menu"
+      />
+      então escolha <b class="ml-2"> "Adicionar na tela inicial"</b>
+    </div>
+    <button (click)="close()"><i class="bi bi-x-lg"></i></button>
+  </div>
+</div>
