@@ -3,8 +3,6 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login.component';
 import { Routes, RouterModule } from '@angular/router';
 
-// Definição das rotas relacionadas às páginas de login, cadastro e recuperação de senha
-
 const routes: Routes = [
   {
     path: '',
@@ -23,5 +21,4 @@ const routes: Routes = [
   }
 ];
 
-// Módulo de rotas para o módulo de login
 export const LoginRoutes = RouterModule.forChild(routes);

@@ -1,0 +1,39 @@
+<!-- RIGHT BAR -->
+<div class="offcanvas offcanvas-end menu-user no-select-text" tabindex="-1" id="rightUserTab" aria-labelledby="rightUserTabLabel">
+  <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+    <div class="px-3">
+      <div class="text-center bg-blue-solid text-white px-4 py-3 shadow-sm rounded-top">
+        <i class="bi bi-person-circle fs-1"></i>
+        <p class="p-0 m-0 font-regular fw-bold">{{userName}}</p>
+        <p class="p-0 m-0 small">{{userUnity}}</p>
+      </div>
+
+      <div id="userOptions" class="bg-light shadow-sm px-1 rounded-bottom">
+        <div data-bs-dismiss="offcanvas" class="d-flex px-3 pt-2 pb-1 pointer align-items-center text-secondary font-regular" title="Minhas Permissões">
+          <i class="bi bi-shield-lock-fill fs-5"></i>
+          <p class="m-0 p-0 ms-3 text-black"> Minhas Permissões</p>
+        </div>
+
+        <div *ngIf="userGrupos.includes('ADMIN')" (click)="navigateTo('home/admin/')" data-bs-dismiss="offcanvas" class="d-flex px-3 py-1 pointer align-items-center text-secondary font-regular" title="Opções de Administrador">
+          <i class="bi bi-gear-fill fs-5"></i>
+          <p class="m-0 p-0 ms-3 text-black"> Opções de Administrador</p>
+        </div>
+
+        <div (click)="navigateTo('home/perguntas-frequentes')" data-bs-dismiss="offcanvas" class="d-flex px-3 py-1 pointer align-items-center text-secondary font-regular" title="Perguntas Frequentes">
+          <i class="bi bi-question-circle-fill fs-5"></i>
+          <p class="m-0 p-0 ms-3 text-black"> Perguntas Frequentes</p>
+        </div>
+
+        <div (click)="falarComSuporte()" data-bs-dismiss="offcanvas" class="d-flex px-3 py-1 pointer align-items-center text-secondary font-regular" title="Fale com o Suporte">
+          <i class="bi bi-whatsapp fs-5"></i>
+          <p class="m-0 p-0 ms-3 text-black"> Fale com o Suporte</p>
+        </div>
+
+        <div (click)="logout()" data-bs-dismiss="offcanvas" class="d-flex px-3 pt-1 pb-2 pointer align-items-center text-secondary font-regular" title="Sair">
+          <i class="bi bi-door-open-fill fs-5"></i>
+          <p class="m-0 p-0 ms-3 text-black"> Sair</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<!-- LEFT BAR -->
+<div *ngIf="showMenu" class="offcanvas offcanvas-start no-select-text" tabindex="-1" id="leftMenuTab" aria-labelledby="leftMenuTabLabel">
+  <div class="offcanvas-body d-flex flex-column justify-content-between h-100">
+    <div class="align-self-start w-100 shadow-sm">
+      <div class="bg-blue-solid d-flex justify-content-between align-items-center m-0 rounded-top px-3 py-2">
+        <div class="d-flex align-items-center p-0 m-0">
+          <i class="bi bi-grid-fill me-2"></i>
+          <p class="m-0 p-0 font-regular fs-6 fw-bold">Acesso Rápido</p>
+        </div>
+        <i class="bi bi-x-lg pointer fw-bold text-white" data-bs-dismiss="offcanvas" aria-label="Close"></i>
+      </div>
+      <div class="bg-light rounded-bottom">
+        <div *ngFor="let module of permitedModules" (click)="navigateTo(module.route)" data-bs-dismiss="offcanvas" class="px-3 py-2 w-100 node-option pointer font-regular">
+          <div class="d-flex align-items-center zoom pe-4">
+            <i class="bi bi-caret-right-fill me-2 text-secondary"></i>
+            <p class="m-0 p-0">{{module.name}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
