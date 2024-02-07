@@ -12,7 +12,7 @@ export class RecoverPasswordComponent implements OnInit {
   public copyright: string = constants.copyright;
 
   // Propriedade que representa o formulário de e-mail usando Reactive Forms
-  public emailForm: FormGroup | undefined;
+  public emailForm!: FormGroup;
 
   constructor(
     private formBuilder: FormBuilder

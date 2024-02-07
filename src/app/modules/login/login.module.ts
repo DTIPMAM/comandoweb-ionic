@@ -29,4 +29,5 @@ import {IonicModule} from "@ionic/angular";
     RecoverPasswordComponent
   ]
 })
+
 export class LoginModule { }
