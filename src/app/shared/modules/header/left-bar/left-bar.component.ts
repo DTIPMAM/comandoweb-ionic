@@ -1,6 +1,6 @@
 import { UserService } from 'src/app/services/user.service';
 import { MODULES_ACCESS } from './data-source';
-import { ModulosSX } from './../../../interfaces/left-bar.interfaces';
+import { ModulosSX } from '../../../interfaces/left-bar.interfaces';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 

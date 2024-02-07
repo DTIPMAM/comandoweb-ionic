@@ -1,1 +1,17 @@
-<router-outlet></router-outlet>
+<div (onResize)="onResize()">
+  <mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+
+  <app-sx-header *ngIf="isHome"></app-sx-header>
+  <app-user-print-mark *ngIf="isHome"></app-user-print-mark>
+
+  <section [ngClass]="{'section-margin pt-3': isHome}">
+
+  </section>
+
+  <!--   <button (click)="onChangeDialog()">termo</button>-->
+
+  <!--  REFAZER A FOOTER - NAO ENCONTREI UMA FORMA DE REAPROVEITAR
+        ALÉM DISSO, ACHO QUE PODE SER FEITO DE UM MODO MAIS SIMPLES -->
+<!--  <app-sx-footer *ngIf="isHome" ></app-sx-footer>-->
+</div>
+
