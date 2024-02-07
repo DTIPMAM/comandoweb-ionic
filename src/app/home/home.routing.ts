@@ -1,5 +1,5 @@
-import { MaintenanceComponent } from './../errors/maintenance/maintenance.component';
-import { AdminRoutesAuthGuard } from './../services/auth/admin-route-auth.guard';
+import { MaintenanceComponent } from '../errors/maintenance/maintenance.component';
+import { AdminRoutesAuthGuard } from '../services/auth/admin-route-auth.guard';
 import { HomeComponent } from './home.component';
 import { Routes, RouterModule } from '@angular/router';
 
